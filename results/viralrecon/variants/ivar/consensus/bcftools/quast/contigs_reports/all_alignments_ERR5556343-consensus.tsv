@@ -1,0 +1,7 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+55	3507	55	3507	MN908947.3	ERR5556343	99.86		True
+fake: scaffold gap size wrong estimation (local)
+3796	25052	3796	25043	MN908947.3	ERR5556343	99.86		True
+fake: scaffold gap size wrong estimation (local)
+25302	29833	25293	29824	MN908947.3	ERR5556343	99.8		True
+CONTIG	ERR5556343	29894	correct

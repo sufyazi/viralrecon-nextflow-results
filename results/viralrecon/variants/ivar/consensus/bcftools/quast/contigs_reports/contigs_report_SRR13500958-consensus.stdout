@@ -1,0 +1,47 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: SRR13500958 (29903bp)
+Best alignment score: 29761.2 (LEN: 29782, IDY: 99.93), Total number of alignments: 1
+		One align captures most of this contig: 55 29836 | 55 29836 | 29782 29782 | 99.93 | MN908947.3 SRR13500958
+
+Analyzing coverage...
+Writing SNPs into /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/minimap_output/SRR13500958-consensus.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/minimap_output/SRR13500958-consensus.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 29782
+	Raw Aligned Bases in Assembly: 29782
+	Total Aligned Bases in Assembly (with "Extras"): 29782
+
+	SNPs: 22
+	Insertions: 0
+	Deletions: 0
+

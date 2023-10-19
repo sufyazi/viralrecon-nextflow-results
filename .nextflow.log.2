@@ -1,0 +1,687 @@
+Oct-18 17:20:49.935 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/viralrecon -profile singularity --max_memory 12.GB --max_cpus 4 --input samplesheet.csv --outdir results/viralrecon --protocol amplicon --genome MN908947.3 --primer_set artic --primer_set_version 3 --skip_kraken2 --skip_assembly --skip_pangolin --skip_nextclade --platform illumina
+Oct-18 17:20:50.026 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Oct-18 17:20:50.060 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/users/ntu/suffiazi/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Oct-18 17:20:50.078 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-18 17:20:50.079 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-18 17:20:50.082 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-18 17:20:50.095 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-18 17:20:50.115 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/users/ntu/suffiazi/.nextflow/scm
+Oct-18 17:20:50.151 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Oct-18 17:20:50.163 [main] INFO  nextflow.cli.CmdRun - Pulling nf-core/viralrecon ...
+Oct-18 17:20:50.165 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/viralrecon/contents/nextflow.config
+Oct-18 17:20:52.436 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/viralrecon/contents/main.nf
+Oct-18 17:20:52.754 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/viralrecon
+Oct-18 17:20:53.082 [main] DEBUG nextflow.scm.AssetManager - Pulling nf-core/viralrecon -- Using remote clone url: https://github.com/nf-core/viralrecon.git
+Oct-18 17:20:57.008 [main] INFO  nextflow.cli.CmdRun -  downloaded from https://github.com/nf-core/viralrecon.git
+Oct-18 17:20:57.051 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/nextflow.config
+Oct-18 17:20:57.052 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/nextflow.config
+Oct-18 17:20:57.064 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Oct-18 17:20:59.031 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, tigem, tubingen_apg, google, apollo, ipop_up, pdc_kth, googlels, eddie, medair, biowulf, bi, bigpurple, adcra, cedars, test_full_nanopore, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, unc_lccc, wehi, awsbatch, wustl_htcf, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, sage, cambridge, podman, ebi_codon, cheaha, xanadu, test, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, ethz_euler, test_full, test_sispa, tuos_stanage, azurebatch, hki, crukmi, docker, engaging, gis, hypatia, psmn, eva, test_nanopore, fgcz, conda, crg, test_full_sispa, singularity, uw_hyak_pedslabs, prince, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, test_full_illumina, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Oct-18 17:20:59.071 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Oct-18 17:20:59.073 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/nf-core/viralrecon` [backstabbing_ekeblad] DSL2 - revision: 3731dd3a32 [master]
+Oct-18 17:20:59.073 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-18 17:20:59.074 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-18 17:20:59.080 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/users/ntu/suffiazi/.nextflow/secrets/store.json
+Oct-18 17:20:59.083 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@216328b2] - activable => nextflow.secret.LocalSecretsProvider@216328b2
+Oct-18 17:20:59.147 [main] DEBUG nextflow.Session - Session UUID: dc7b353a-e647-4b1c-80b1-989e5840b3fc
+Oct-18 17:20:59.148 [main] DEBUG nextflow.Session - Run name: backstabbing_ekeblad
+Oct-18 17:20:59.148 [main] DEBUG nextflow.Session - Executor pool size: 8
+Oct-18 17:20:59.157 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-18 17:20:59.162 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-18 17:20:59.448 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (23:07 SGST)
+  System: Linux 4.18.0-305.25.1.el8_4.x86_64
+  Runtime: Groovy 3.0.19 on Java HotSpot(TM) 64-Bit Server VM 19.0.2+7-44
+  Encoding: UTF-8 (UTF-8)
+  Process: 3432735@x1001c0s3b0n1 [10.168.4.37]
+  CPUs: 8 - Mem: 30 GB (29.5 GB) - Swap: 0 (0)
+Oct-18 17:20:59.470 [main] DEBUG nextflow.Session - Work-dir: /scratch/users/ntu/suffiazi/mooc_workspace/work [lustre]
+Oct-18 17:20:59.489 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-18 17:20:59.497 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-18 17:20:59.587 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-18 17:20:59.600 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Oct-18 17:20:59.985 [main] DEBUG nextflow.Session - Session start
+Oct-18 17:20:59.990 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /scratch/users/ntu/suffiazi/mooc_workspace/results/viralrecon/pipeline_info/execution_trace_2023-10-18_17-20-58.txt
+Oct-18 17:21:00.004 [main] DEBUG nextflow.Session - Using default localLib path: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/lib
+Oct-18 17:21:00.008 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/lib
+Oct-18 17:21:00.009 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/lib/nfcore_external_java_deps.jar
+Oct-18 17:21:01.134 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-18 17:21:01.250 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/viralrecon v2.6.0-g3731dd3[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision                   : [0;32mmaster[0m
+  [0;34mrunName                    : [0;32mbackstabbing_ekeblad[0m
+  [0;34mcontainerEngine            : [0;32msingularity[0m
+  [0;34mlaunchDir                  : [0;32m/scratch/users/ntu/suffiazi/mooc_workspace[0m
+  [0;34mworkDir                    : [0;32m/scratch/users/ntu/suffiazi/mooc_workspace/work[0m
+  [0;34mprojectDir                 : [0;32m/home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon[0m
+  [0;34muserName                   : [0;32msuffiazi[0m
+  [0;34mprofile                    : [0;32msingularity[0m
+  [0;34mconfigFiles                : [0;32m/home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput                      : [0;32msamplesheet.csv[0m
+  [0;34mplatform                   : [0;32millumina[0m
+  [0;34mprotocol                   : [0;32mamplicon[0m
+  [0;34moutdir                     : [0;32mresults/viralrecon[0m
+
+[1mReference genome options[0m
+  [0;34mgenome                     : [0;32mMN908947.3[0m
+  [0;34mfasta                      : [0;32mhttps://github.com/artic-network/artic-ncov2019/raw/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta[0m
+  [0;34mgff                        : [0;32mhttps://github.com/nf-core/test-datasets/raw/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz[0m
+  [0;34mprimer_bed                 : [0;32mhttps://github.com/artic-network/artic-ncov2019/raw/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed[0m
+  [0;34mprimer_set                 : [0;32martic[0m
+  [0;34mprimer_set_version         : [0;32m3[0m
+
+[1mNanopore/Illumina options[0m
+  [0;34mnextclade_dataset          : [0;32mhttps://github.com/nf-core/test-datasets/raw/viralrecon/genome/MN908947.3/nextclade_sars-cov-2_MN908947_2022-06-14T12_00_00Z.tar.gz[0m
+  [0;34mnextclade_dataset_name     : [0;32msars-cov-2[0m
+  [0;34mnextclade_dataset_reference: [0;32mMN908947[0m
+  [0;34mnextclade_dataset_tag      : [0;32m2022-06-14T12:00:00Z[0m
+  [0;34mskip_pangolin              : [0;32mtrue[0m
+  [0;34mskip_nextclade             : [0;32mtrue[0m
+
+[1mIllumina QC, read trimming and filtering options[0m
+  [0;34mskip_kraken2               : [0;32mtrue[0m
+
+[1mIllumina de novo assembly options[0m
+  [0;34mskip_assembly              : [0;32mtrue[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus                   : [0;32m4[0m
+  [0;34mmax_memory                 : [0;32m12.GB[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/viralrecon for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.3901628
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/viralrecon/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Oct-18 17:21:03.490 [main] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:04.396 [main] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz
+Oct-18 17:21:04.814 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 2.1.4
+Oct-18 17:21:04.845 [main] INFO  nextflow.plugin.PluginUpdater - Downloading plugin nf-amazon@2.1.4
+Oct-18 17:21:09.145 [main] INFO  org.pf4j.util.FileUtils - Expanded plugin zip 'nf-amazon-2.1.4.zip' in 'nf-amazon-2.1.4'
+Oct-18 17:21:09.178 [main] DEBUG nextflow.plugin.PluginUpdater - Failed atomic move for plugin /var/tmp/pbs.3392362.pbs101/pf4j-update-downloader18141591987552763863/nf-amazon-2.1.4 -> /home/users/ntu/suffiazi/.nextflow/plugins/nf-amazon-2.1.4 - Reason: /var/tmp/pbs.3392362.pbs101/pf4j-update-downloader18141591987552763863/nf-amazon-2.1.4 -> /home/users/ntu/suffiazi/.nextflow/plugins/nf-amazon-2.1.4: Invalid cross-device link - Fallback on safe move
+Oct-18 17:21:09.513 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@2.1.4' resolved
+Oct-18 17:21:09.513 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@2.1.4'
+Oct-18 17:21:09.551 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@2.1.4
+Oct-18 17:21:09.578 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Oct-18 17:21:09.579 [main] DEBUG nextflow.file.FileHelper - Started plugin 'nf-amazon' required to handle file: s3://ngi-igenomes/test-data/viralrecon/kraken2_human.tar.gz
+Oct-18 17:21:09.588 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Oct-18 17:21:09.632 [main] DEBUG nextflow.cloud.aws.config.AwsConfig - AWS S3 config properties: {max_error_retry=5}
+Oct-18 17:21:13.885 [main] DEBUG nextflow.cloud.aws.nio.S3Client - Setting S3 glacierRetrievalTier=null
+Oct-18 17:21:13.972 [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:60)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:48)
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:124)
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:80)
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:166)
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75)
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:118)
+	at nextflow.cloud.aws.util.S3CredentialsProvider.getCredentials(S3CredentialsProvider.groovy:52)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.getCredentialsFromContext(AmazonHttpClient.java:1269)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.runBeforeRequestHandlers(AmazonHttpClient.java:845)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:794)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:781)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:755)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:715)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:697)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:561)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:541)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5456)
+	at com.amazonaws.services.s3.AmazonS3Client.getBucketRegionViaHeadRequest(AmazonS3Client.java:6432)
+	at com.amazonaws.services.s3.AmazonS3Client.fetchRegionFromCache(AmazonS3Client.java:6404)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5441)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5403)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5397)
+	at com.amazonaws.services.s3.AmazonS3Client.listObjects(AmazonS3Client.java:928)
+	at nextflow.cloud.aws.nio.S3Client.listObjects(S3Client.java:144)
+	at nextflow.cloud.aws.nio.util.S3ObjectSummaryLookup.lookup(S3ObjectSummaryLookup.java:89)
+	at nextflow.cloud.aws.nio.S3FileSystemProvider.checkAccess(S3FileSystemProvider.java:607)
+	at java.base/java.nio.file.Files.exists(Files.java:2526)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.invoke(StaticMetaMethodSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:89)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:94)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.extension.FilesEx.exists(FilesEx.groovy:456)
+	at nextflow.file.FileHelper.checkIfExists(FileHelper.groovy:1056)
+	at nextflow.file.FileHelper$checkIfExists$1.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
+	at nextflow.file.FileHelper$checkIfExists$1.callStatic(Unknown Source)
+	at nextflow.Nextflow.file(Nextflow.groovy:123)
+	at nextflow.Nextflow$file.callStatic(Unknown Source)
+	at Script_b5dd8be0b54c663e.runScript(Script_b5dd8be0b54c663e:26)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:222)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:151)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure2.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:123)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_7ddd67a51b3ad523.runScript(Script_7ddd67a51b3ad523:57)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+Caused by: java.net.SocketException: Network is unreachable
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:279)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:384)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:406)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1286)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 81 common frames omitted
+Oct-18 17:21:13.976 [main] DEBUG n.c.aws.util.S3CredentialsProvider - No AWS credentials available - falling back to anonymous access
+Oct-18 17:21:18.316 [main] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:25.923 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF
+Oct-18 17:21:25.925 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:PREPARE_GENOME:GUNZIP_.*` matches process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF
+Oct-18 17:21:26.022 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.022 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.027 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-18 17:21:26.034 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=30 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Oct-18 17:21:26.036 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-18 17:21:26.152 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Oct-18 17:21:26.153 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_GETCHROMSIZES` matches process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Oct-18 17:21:26.154 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.155 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.163 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS
+Oct-18 17:21:26.163 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:COLLAPSE_PRIMERS` matches process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS
+Oct-18 17:21:26.164 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.164 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.171 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:BOWTIE2_BUILD
+Oct-18 17:21:26.171 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BOWTIE2_BUILD` matches process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:BOWTIE2_BUILD
+Oct-18 17:21:26.173 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.174 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.183 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:SNPEFF_BUILD
+Oct-18 17:21:26.183 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNPEFF_BUILD` matches process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:SNPEFF_BUILD
+Oct-18 17:21:26.184 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.184 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.206 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK
+Oct-18 17:21:26.207 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMPLESHEET_CHECK` matches process NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK
+Oct-18 17:21:26.208 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.208 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.241 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:CAT_FASTQ
+Oct-18 17:21:26.242 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CAT_FASTQ` matches process NFCORE_VIRALRECON:ILLUMINA:CAT_FASTQ
+Oct-18 17:21:26.243 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.243 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.258 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW
+Oct-18 17:21:26.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW
+Oct-18 17:21:26.260 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.260 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.270 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTP
+Oct-18 17:21:26.270 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTP` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTP
+Oct-18 17:21:26.272 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.272 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.284 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_TRIM
+Oct-18 17:21:26.285 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_TRIM_FASTP_FASTQC:FASTQC_TRIM` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_TRIM
+Oct-18 17:21:26.286 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.286 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BOWTIE2_ALIGN
+Oct-18 17:21:26.302 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BOWTIE2_ALIGN` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BOWTIE2_ALIGN
+Oct-18 17:21:26.303 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.303 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.310 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.311 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_ALIGN_BOWTIE2:.*:SAMTOOLS_SORT` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.312 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.312 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.318 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.318 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_ALIGN_BOWTIE2:.*:SAMTOOLS_INDEX` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.320 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.320 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.329 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.329 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_ALIGN_BOWTIE2:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.330 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.330 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.337 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.339 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_ALIGN_BOWTIE2:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.340 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.340 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.345 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.346 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:FASTQ_ALIGN_BOWTIE2:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.346 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.346 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.365 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:IVAR_TRIM
+Oct-18 17:21:26.365 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:IVAR_TRIM` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:IVAR_TRIM
+Oct-18 17:21:26.366 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.366 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.373 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.373 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:BAM_TRIM_PRIMERS_IVAR:.*:SAMTOOLS_SORT` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.374 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.374 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.379 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.380 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:BAM_TRIM_PRIMERS_IVAR:.*:SAMTOOLS_INDEX` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.381 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.381 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.390 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.390 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:BAM_TRIM_PRIMERS_IVAR:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.391 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.391 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.396 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.396 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:BAM_TRIM_PRIMERS_IVAR:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.397 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.397 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.401 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.402 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:BAM_TRIM_PRIMERS_IVAR:.*:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.402 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.402 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.415 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:PICARD_COLLECTMULTIPLEMETRICS
+Oct-18 17:21:26.416 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PICARD_COLLECTMULTIPLEMETRICS` matches process NFCORE_VIRALRECON:ILLUMINA:PICARD_COLLECTMULTIPLEMETRICS
+Oct-18 17:21:26.417 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.417 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.428 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_GENOME
+Oct-18 17:21:26.429 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MOSDEPTH_GENOME` matches process NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_GENOME
+Oct-18 17:21:26.430 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.430 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.440 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_GENOME
+Oct-18 17:21:26.441 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_MOSDEPTH_REGIONS_GENOME` matches process NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_GENOME
+Oct-18 17:21:26.442 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.442 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.449 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_AMPLICON
+Oct-18 17:21:26.450 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MOSDEPTH_AMPLICON` matches process NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_AMPLICON
+Oct-18 17:21:26.451 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.451 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.463 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_AMPLICON
+Oct-18 17:21:26.464 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_MOSDEPTH_REGIONS_AMPLICON` matches process NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_AMPLICON
+Oct-18 17:21:26.465 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.465 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.473 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS
+Oct-18 17:21:26.474 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:IVAR_VARIANTS` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS
+Oct-18 17:21:26.475 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.475 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.485 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:IVAR_VARIANTS_TO_VCF` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS_TO_VCF
+Oct-18 17:21:26.486 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.486 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.492 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:BCFTOOLS_SORT
+Oct-18 17:21:26.493 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:VARIANTS_IVAR:BCFTOOLS_SORT` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:BCFTOOLS_SORT
+Oct-18 17:21:26.494 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.494 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.504 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.505 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:VARIANTS_IVAR:.*:TABIX_TABIX` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.506 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.506 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.514 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.514 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:VARIANTS_IVAR:.*:BCFTOOLS_STATS` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.515 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.515 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.527 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPEFF_ANN
+Oct-18 17:21:26.528 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNPEFF_ANN` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPEFF_ANN
+Oct-18 17:21:26.529 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.529 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.538 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:TABIX_BGZIP
+Oct-18 17:21:26.540 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:.*:.*:SNPEFF_SNPSIFT:.*:TABIX_BGZIP` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:TABIX_BGZIP
+Oct-18 17:21:26.541 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.541 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.551 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.552 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:VARIANTS_IVAR:.*:TABIX_TABIX` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.552 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:.*:.*:SNPEFF_SNPSIFT:.*:.*:TABIX_TABIX` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.553 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.553 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.562 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.562 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:VARIANTS_IVAR:.*:BCFTOOLS_STATS` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.563 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:.*:.*:SNPEFF_SNPSIFT:.*:.*:BCFTOOLS_STATS` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.564 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.564 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.573 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPSIFT_EXTRACTFIELDS
+Oct-18 17:21:26.574 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:.*:.*:SNPEFF_SNPSIFT:SNPSIFT_EXTRACTFIELDS` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPSIFT_EXTRACTFIELDS
+Oct-18 17:21:26.574 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.574 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.590 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:ASCIIGENOME
+Oct-18 17:21:26.591 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASCIIGENOME` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:ASCIIGENOME
+Oct-18 17:21:26.592 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.592 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.602 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_FILTER
+Oct-18 17:21:26.603 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BCFTOOLS_FILTER` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_FILTER
+Oct-18 17:21:26.603 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.604 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.610 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:TABIX_TABIX
+Oct-18 17:21:26.610 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:CONSENSUS_BCFTOOLS:TABIX_TABIX` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:TABIX_TABIX
+Oct-18 17:21:26.611 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.611 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.622 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MAKE_BED_MASK` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:MAKE_BED_MASK
+Oct-18 17:21:26.624 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.624 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.630 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MERGE
+Oct-18 17:21:26.630 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEDTOOLS_MERGE` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MERGE
+Oct-18 17:21:26.631 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.631 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.636 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MASKFASTA
+Oct-18 17:21:26.637 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEDTOOLS_MASKFASTA` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MASKFASTA
+Oct-18 17:21:26.638 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.638 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.645 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_CONSENSUS
+Oct-18 17:21:26.646 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BCFTOOLS_CONSENSUS` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_CONSENSUS
+Oct-18 17:21:26.646 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.646 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.652 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:RENAME_FASTA_HEADER` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:RENAME_FASTA_HEADER
+Oct-18 17:21:26.653 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.653 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.663 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:QUAST
+Oct-18 17:21:26.664 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:.*:CONSENSUS_.*:.*:QUAST` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:QUAST
+Oct-18 17:21:26.665 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.665 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.671 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:PLOT_BASE_DENSITY
+Oct-18 17:21:26.672 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_BASE_DENSITY` matches process NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:PLOT_BASE_DENSITY
+Oct-18 17:21:26.673 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.673 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.682 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:BCFTOOLS_QUERY
+Oct-18 17:21:26.683 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BCFTOOLS_QUERY` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:BCFTOOLS_QUERY
+Oct-18 17:21:26.684 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.684 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.693 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MAKE_VARIANTS_LONG_TABLE` matches process NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:MAKE_VARIANTS_LONG_TABLE
+Oct-18 17:21:26.694 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.694 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.725 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VIRALRECON:ILLUMINA:CUSTOM_DUMPSOFTWAREVERSIONS
+Oct-18 17:21:26.726 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_DUMPSOFTWAREVERSIONS` matches process NFCORE_VIRALRECON:ILLUMINA:CUSTOM_DUMPSOFTWAREVERSIONS
+Oct-18 17:21:26.727 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.727 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.765 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VIRALRECON:ILLUMINA:MULTIQC
+Oct-18 17:21:26.766 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process NFCORE_VIRALRECON:ILLUMINA:MULTIQC
+Oct-18 17:21:26.767 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-18 17:21:26.767 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-18 17:21:26.781 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: MAKE_BED_MASK, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MASKFASTA, NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_TRIM, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_FILTER, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT, MOSDEPTH, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:IVAR_TRIM, BCFTOOLS_CONSENSUS, CAT_FASTQ, GUNZIP, NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_AMPLICON, SAMTOOLS_STATS, NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_GENOME, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:BCFTOOLS_STATS, NFCORE_VIRALRECON:ILLUMINA:MULTIQC, GUNZIP_GFF, QUAST, NFCORE_VIRALRECON:ILLUMINA:CUSTOM_DUMPSOFTWAREVERSIONS, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:BCFTOOLS_STATS, GUNZIP_GFA, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:QUAST, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:TABIX_TABIX, NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:SNPEFF_BUILD, BOWTIE2_ALIGN, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX, UNTAR_BLAST_DB, SAMTOOLS_INDEX, TABIX_TABIX, FASTQC, COLLAPSE_PRIMERS, MULTIQC, UNICYCLER, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:TABIX_TABIX, CUTADAPT, NEXTCLADE_DATASETGET, KRAKEN2_BUILD, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MERGE, IVAR_TRIM, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:PLOT_BASE_DENSITY, UNTAR_BOWTIE2_INDEX, BLAST_MAKEBLASTDB, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:TABIX_BGZIP, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:RENAME_FASTA_HEADER, SAMTOOLS_FLAGSTAT, MAKE_VARIANTS_LONG_TABLE, SAMPLESHEET_CHECK, SNPSIFT_EXTRACTFIELDS, GUNZIP_SCAFFOLDS, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPEFF_ANN, GUNZIP_FASTA, PLASMIDID, BCFTOOLS_SORT, NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF, RENAME_FASTA_HEADER, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:ASCIIGENOME, BEDTOOLS_MASKFASTA, BCFTOOLS_FILTER, FILTER_BLASTN, BLAST_BLASTN, BCFTOOLS_NORM, PLOT_BASE_DENSITY, BANDAGE_IMAGE, MOSDEPTH_GENOME, FASTQC_TRIM, BCFTOOLS_STATS, SNPEFF_BUILD, IVAR_CONSENSUS, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS, FASTP, TABIX_BGZIP, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT, NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_AMPLICON, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:MAKE_VARIANTS_LONG_TABLE, MINIA, PICARD_MARKDUPLICATES, NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTP, NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_GENOME, GUNZIP_PRIMER_FASTA, KRAKEN2_KRAKEN2, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_CONSENSUS, UNTAR, FASTQC_RAW, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT, NEXTCLADE_RUN, NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK, NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES, NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS, PLOT_MOSDEPTH_REGIONS_GENOME, MOSDEPTH_AMPLICON, IVAR_VARIANTS, PICARD_COLLECTMULTIPLEMETRICS, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPSIFT_EXTRACTFIELDS, BEDTOOLS_GETFASTA, BOWTIE2_BUILD, SPADES, CUSTOM_GETCHROMSIZES, BCFTOOLS_QUERY, GUNZIP_PRIMER_BED, NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS, SAMTOOLS_SORT, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BOWTIE2_ALIGN, NFCORE_VIRALRECON:ILLUMINA:CAT_FASTQ, NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:MAKE_BED_MASK, PANGOLIN, ASCIIGENOME, BCFTOOLS_MPILEUP, NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT, SNPEFF_ANN, ABACAS, NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:BOWTIE2_BUILD, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS_TO_VCF, NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW, BEDTOOLS_MERGE, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:TABIX_TABIX, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:BCFTOOLS_SORT, UNTAR_NEXTCLADE_DB, UNTAR_KRAKEN2_DB, NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:BCFTOOLS_QUERY, PLOT_MOSDEPTH_REGIONS_AMPLICON, IVAR_VARIANTS_TO_VCF, SAMTOOLS_IDXSTATS, PLOT_MOSDEPTH_REGIONS, CUSTOM_DUMPSOFTWAREVERSIONS, NFCORE_VIRALRECON:ILLUMINA:PICARD_COLLECTMULTIPLEMETRICS
+Oct-18 17:21:26.809 [main] WARN  nextflow.Session - There's no process matching config selector: .*:.*:PREPARE_GENOME:UNTAR_.*
+Oct-18 17:21:26.812 [main] DEBUG nextflow.Session - Igniting dataflow network (130)
+Oct-18 17:21:26.813 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF
+Oct-18 17:21:26.814 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Oct-18 17:21:26.815 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS
+Oct-18 17:21:26.815 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:BOWTIE2_BUILD
+Oct-18 17:21:26.818 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:SNPEFF_BUILD
+Oct-18 17:21:26.819 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK
+Oct-18 17:21:26.819 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CAT_FASTQ
+Oct-18 17:21:26.819 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW
+Oct-18 17:21:26.820 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTP
+Oct-18 17:21:26.820 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_TRIM_FASTP_FASTQC:FASTQC_TRIM
+Oct-18 17:21:26.820 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BOWTIE2_ALIGN
+Oct-18 17:21:26.826 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.841 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:FASTQ_ALIGN_BOWTIE2:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:IVAR_TRIM
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Oct-18 17:21:26.842 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Oct-18 17:21:26.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Oct-18 17:21:26.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Oct-18 17:21:26.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:BAM_TRIM_PRIMERS_IVAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Oct-18 17:21:26.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PICARD_COLLECTMULTIPLEMETRICS
+Oct-18 17:21:26.847 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_GENOME
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_GENOME
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:MOSDEPTH_AMPLICON
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:PLOT_MOSDEPTH_REGIONS_AMPLICON
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:IVAR_VARIANTS_TO_VCF
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:BCFTOOLS_SORT
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.848 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPEFF_ANN
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:TABIX_BGZIP
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:TABIX_TABIX
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:VCF_BGZIP_TABIX_STATS:VCF_TABIX_STATS:BCFTOOLS_STATS
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:SNPEFF_SNPSIFT:SNPSIFT_EXTRACTFIELDS
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_IVAR:VARIANTS_QC:ASCIIGENOME
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_FILTER
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:TABIX_TABIX
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:MAKE_BED_MASK
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MERGE
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BEDTOOLS_MASKFASTA
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:BCFTOOLS_CONSENSUS
+Oct-18 17:21:26.849 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:RENAME_FASTA_HEADER
+Oct-18 17:21:26.850 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:QUAST
+Oct-18 17:21:26.850 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CONSENSUS_BCFTOOLS:CONSENSUS_QC:PLOT_BASE_DENSITY
+Oct-18 17:21:26.850 [Actor Thread 1] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:26.851 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:BCFTOOLS_QUERY
+Oct-18 17:21:26.851 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:VARIANTS_LONG_TABLE:MAKE_VARIANTS_LONG_TABLE
+Oct-18 17:21:26.851 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:CUSTOM_DUMPSOFTWAREVERSIONS
+Oct-18 17:21:26.851 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VIRALRECON:ILLUMINA:MULTIQC
+Oct-18 17:21:26.852 [Actor Thread 2] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:26.853 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_171f56be792dd032: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/abacas/main.nf
+  Script_392e714dbe8a1df6: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/fastqc/main.nf
+  Script_82832e4f78731dc7: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/././../../modules/local/snpsift_extractfields.nf
+  Script_e5c8e282196fb75b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/local/filter_blastn.nf
+  Script_4ae97b6c4de15968: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/kraken2_build.nf
+  Script_afe2a5128af617ec: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/nf-core/mosdepth/main.nf
+  Script_5a9d552c62a087ee: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bandage/image/main.nf
+  Script_9eaf890fa8a7af97: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/local/asciigenome.nf
+  Script_50b41f6826c95502: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bowtie2/build/main.nf
+  Script_cc13f936b26c353f: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../nf-core/bam_sort_stats_samtools/main.nf
+  Script_cff2a19c060594ab: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./variants_qc.nf
+  Script_c51a3e306ca4c7aa: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/bam_trim_primers_ivar.nf
+  Script_1163f0f7340cba96: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/mpileup/main.nf
+  Script_7a3e19921fa26aec: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/pangolin/main.nf
+  Script_cc2526b718012024: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/local/multiqc_illumina.nf
+  Script_bbf547d8dba4eb76: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/blast/blastn/main.nf
+  Script_b99f81f3247c1b22: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/gunzip/main.nf
+  Script_f82ba87ff21585e1: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/local/plot_base_density.nf
+  Script_98b09c3b35046f13: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/samplesheet_check.nf
+  Script_1d7f44b8ee00eb23: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/rename_fasta_header.nf
+  Script_813f8bd24f68044c: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/../../../modules/nf-core/samtools/flagstat/main.nf
+  Script_0e1385d55e695123: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/sort/main.nf
+  Script_622d4b2a91e75ea6: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/bam_markduplicates_picard/../../../modules/nf-core/samtools/index/main.nf
+  Script_212886b35bdb8b3e: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/variants_long_table.nf
+  Script_0df5d5439880a542: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/assembly_spades.nf
+  Script_7527dacac01b0a6d: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/././././vcf_tabix_stats.nf
+  Script_dd40e7ee19caedbd: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/tabix/tabix/main.nf
+  Script_eb68c3e575f8fcdb: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/consensus_bcftools.nf
+  Script_e67131615ff8f59b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/nextclade/run/main.nf
+  Script_edfe1f1a3349a1ba: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/prepare_genome_illumina.nf
+  Script_0c5ebca7ad03f851: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/bam_markduplicates_picard/../../../modules/nf-core/picard/markduplicates/main.nf
+  Script_67767acafb3ca123: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/././../../modules/local/snpeff_ann.nf
+  Script_f560ba5b2809315b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_d7295afec28f0af7: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/fastq_trim_fastp_fastqc.nf
+  Script_ddee89947b9fac93: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bedtools/getfasta/main.nf
+  Script_0f06d4e9cb0c04fd: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/fastp/main.nf
+  Script_78f752979dec5aaa: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/quast/main.nf
+  Script_c01951670e23583f: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/././snpeff_snpsift.nf
+  Script_bc1513495600293b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/make_variants_long_table.nf
+  Script_161e0fc774636b4d: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/filter/main.nf
+  Script_653df7ce942ce029: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./././vcf_bgzip_tabix_stats.nf
+  Script_3936c78ef9aedf26: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/ivar/variants/main.nf
+  Script_f9bc8fbc66fea321: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/collapse_primers.nf
+  Script_582e23b0fa8893c0: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./consensus_qc.nf
+  Script_0c90d264a51bc64b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bedtools/merge/main.nf
+  Script_dbeb776b6996f1b0: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/plasmidid/main.nf
+  Script_d049e4333c2db68e: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/norm/main.nf
+  Script_e69457c5a9478b12: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/snpeff_build.nf
+  Script_509677ea22863b9c: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/query/main.nf
+  Script_524f102e8e077dc3: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/input_check.nf
+  Script_747a639779ec3d31: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./../../modules/nf-core/bcftools/stats/main.nf
+  Script_6e7e3ea92560e94a: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/fastq_align_bowtie2/../bam_sort_stats_samtools/../bam_stats_samtools/main.nf
+  Script_505ec9861459c120: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./././../../modules/nf-core/tabix/bgzip/main.nf
+  Script_b7eabc0280d0f6de: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/spades/main.nf
+  Script_6ced4aca7f503e1e: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/minia/main.nf
+  Script_08e8120406c42c87: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/fastq_align_bowtie2/../bam_sort_stats_samtools/../bam_stats_samtools/../../../modules/nf-core/samtools/stats/main.nf
+  Script_d9f37cc7b6553f2c: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/nf-core/kraken2/kraken2/main.nf
+  Script_cb211c549341a328: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/../../../modules/nf-core/samtools/idxstats/main.nf
+  Script_dd1c43c2a0597b3b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/consensus/main.nf
+  Script_9f7e885c36e49ade: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/variants_ivar.nf
+  Script_043409e31d8b9164: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/variants_bcftools.nf
+  Script_a4cc5b311d906ff4: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/assembly_minia.nf
+  Script_0aaf4911c5a2ee55: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/local/plot_mosdepth_regions.nf
+  Script_c5947f9108c123ff: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/nextclade/datasetget/main.nf
+  Script_dbfcd99b4643d9a2: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/bam_markduplicates_picard/main.nf
+  Script_3e99caba1ee271cd: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/bedtools/maskfasta/main.nf
+  Script_3da931254dea4372: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/local/cutadapt.nf
+  Script_f9a3f3717ec9abf7: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/nf-core/picard/collectmultiplemetrics/main.nf
+  Script_95a000d7314a53ff: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/./assembly_qc.nf
+  Script_7ddd67a51b3ad523: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/main.nf
+  Script_c45bc812e1d5f5cb: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/sort/main.nf
+  Script_91738e59e65f95b5: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../modules/nf-core/cat/fastq/main.nf
+  Script_143639a160311391: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/assembly_unicycler.nf
+  Script_cb35c946a46bb082: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/make_bed_mask.nf
+  Script_cdf3da412293fa45: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/untar/main.nf
+  Script_ae0a281286baa19e: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/local/ivar_variants_to_vcf.nf
+  Script_bf272342dd9add44: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/blast/makeblastdb/main.nf
+  Script_5e602e6befe4adc6: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/custom/getchromsizes/main.nf
+  Script_fa87eec1e33566a9: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/fastq_align_bowtie2/main.nf
+  Script_9542053f40d7b8d9: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/nf-core/fastq_align_bowtie2/../../../modules/nf-core/bowtie2/align/main.nf
+  Script_e0924165c0b96bdf: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/ivar/consensus/main.nf
+  Script_9b7486b9ec30328b: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/consensus_ivar.nf
+  Script_6a4e2158c1b55792: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/unicycler/main.nf
+  Script_2455faffc6e9a0ac: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/../subworkflows/local/../../modules/nf-core/ivar/trim/main.nf
+  Script_b5dd8be0b54c663e: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/./workflows/illumina.nf
+Oct-18 17:21:26.854 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-18 17:21:26.854 [main] DEBUG nextflow.Session - Session await
+Oct-18 17:21:26.863 [Actor Thread 12] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Oct-18 17:21:26.892 [Actor Thread 16] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:26.920 [Actor Thread 2] WARN  nextflow.container.SingularityCache - Singularity cache directory has not been defined -- Remote image will be stored in the path: /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity -- Use the environment variable NXF_SINGULARITY_CACHEDIR to specify a different location
+Oct-18 17:21:26.920 [Actor Thread 2] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/python:3.9--1 [cache /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-python-3.9--1.img]
+Oct-18 17:21:26.991 [Actor Thread 9] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.024 s; total time: 0.025 s
+Oct-18 17:21:27.002 [Actor Thread 9] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /scratch/users/ntu/suffiazi/mooc_workspace/work/collect-file/aa146f783566abe946b5cc21e822edd2
+Oct-18 17:21:27.011 [Actor Thread 9] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /var/tmp/pbs.3392362.pbs101/nxf-11074794461212098400
+Oct-18 17:21:27.174 [Actor Thread 10] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:27.222 [Actor Thread 17] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:27.223 [Actor Thread 7] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:27.242 [Actor Thread 13] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:27.250 [Actor Thread 18] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz
+Oct-18 17:21:27.265 [FileTransfer-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/artic-network/artic-ncov2019/raw/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed to work dir: /scratch/users/ntu/suffiazi/mooc_workspace/work/stage-dc7b353a-e647-4b1c-80b1-989e5840b3fc/94/fe9b866ab6c3c46aa9c71884f10203/nCoV-2019.primer.bed
+Oct-18 17:21:27.265 [FileTransfer-2] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/artic-network/artic-ncov2019/raw/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta to work dir: /scratch/users/ntu/suffiazi/mooc_workspace/work/stage-dc7b353a-e647-4b1c-80b1-989e5840b3fc/59/8c1a462dcc2733c909038c1d563631/nCoV-2019.reference.fasta
+Oct-18 17:21:27.265 [FileTransfer-3] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz to work dir: /scratch/users/ntu/suffiazi/mooc_workspace/work/stage-dc7b353a-e647-4b1c-80b1-989e5840b3fc/33/591dd6967b14545b616eb966c5bd50/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz
+Oct-18 17:21:27.270 [FileTransfer-1] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:27.271 [FileTransfer-3] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz
+Oct-18 17:21:27.272 [FileTransfer-2] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:27.287 [FileTransfer-3] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/MN908947.3/GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz
+Oct-18 17:21:27.289 [FileTransfer-1] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.primer.bed
+Oct-18 17:21:27.292 [FileTransfer-2] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:27.303 [Actor Thread 7] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/ubuntu:20.04 [cache /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-ubuntu-20.04.img]
+Oct-18 17:21:27.315 [Actor Thread 10] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/samtools:1.16.1--h6899075_1 [cache /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-samtools-1.16.1--h6899075_1.img]
+Oct-18 17:21:27.322 [Actor Thread 9] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/bowtie2:2.4.4--py39hbb4e92a_0 [cache /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-bowtie2-2.4.4--py39hbb4e92a_0.img]
+Oct-18 17:21:38.688 [Actor Thread 10] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/samtools:1.16.1--h6899075_1 path=/scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-samtools-1.16.1--h6899075_1.img
+Oct-18 17:21:39.437 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-18 17:21:39.472 [Task submitter] INFO  nextflow.Session - [f0/25988a] Submitted process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES (nCoV-2019.reference.fasta)
+Oct-18 17:21:40.544 [Actor Thread 7] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/ubuntu:20.04 path=/scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-ubuntu-20.04.img
+Oct-18 17:21:40.558 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-18 17:21:40.558 [Task submitter] INFO  nextflow.Session - [72/efb2eb] Submitted process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF (GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz)
+Oct-18 17:21:43.481 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:GUNZIP_GFF (GCA_009858895.3_ASM985889v3_genomic.200409.gff.gz); status: COMPLETED; exit: 0; error: -; workDir: /scratch/users/ntu/suffiazi/mooc_workspace/work/72/efb2ebb2681a423593ecc87b624dec]
+Oct-18 17:21:43.603 [Actor Thread 5] DEBUG n.file.http.XFileSystemProvider - Remote redirect location: https://raw.githubusercontent.com/artic-network/artic-ncov2019/master/primer_schemes/nCoV-2019/V3/nCoV-2019.reference.fasta
+Oct-18 17:21:43.637 [Actor Thread 7] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/snpeff:5.0--hdfd78af_1 [cache /scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-snpeff-5.0--hdfd78af_1.img]
+Oct-18 17:21:43.644 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES (nCoV-2019.reference.fasta); status: COMPLETED; exit: 0; error: -; workDir: /scratch/users/ntu/suffiazi/mooc_workspace/work/f0/25988ac73db505fd6fb8ad084d35de]
+Oct-18 17:21:43.850 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:CUSTOM_GETCHROMSIZES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Oct-18 17:21:48.097 [Actor Thread 2] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/python:3.9--1 path=/scratch/users/ntu/suffiazi/mooc_workspace/work/singularity/depot.galaxyproject.org-singularity-python-3.9--1.img
+Oct-18 17:21:48.191 [Actor Thread 14] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/bin/check_samplesheet.py
+Oct-18 17:21:48.191 [Actor Thread 16] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/users/ntu/suffiazi/.nextflow/assets/nf-core/viralrecon/bin/collapse_primer_bed.py
+Oct-18 17:21:48.221 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-18 17:21:48.222 [Task submitter] INFO  nextflow.Session - [be/af8c2b] Submitted process > NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS (nCoV-2019.primer.bed)
+Oct-18 17:21:48.230 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-18 17:21:48.231 [Task submitter] INFO  nextflow.Session - [8c/6a80b4] Submitted process > NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)
+Oct-18 17:21:49.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv); status: COMPLETED; exit: 1; error: -; workDir: /scratch/users/ntu/suffiazi/mooc_workspace/work/8c/6a80b4cd9db542c6d38c03c6bb6e3f]
+Oct-18 17:21:49.446 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv); work-dir=/scratch/users/ntu/suffiazi/mooc_workspace/work/8c/6a80b4cd9db542c6d38c03c6bb6e3f
+  error [nextflow.exception.ProcessFailedException]: Process `NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)` terminated with an error exit status (1)
+Oct-18 17:21:49.517 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)'
+
+Caused by:
+  Process `NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)` terminated with an error exit status (1)
+
+Command executed:
+
+  check_samplesheet.py \
+      samplesheet.csv \
+      samplesheet.valid.csv \
+      --platform illumina
+  
+  cat <<-END_VERSIONS > versions.yml
+  "NFCORE_VIRALRECON:ILLUMINA:INPUT_CHECK:SAMPLESHEET_CHECK":
+      python: $(python --version | sed 's/Python //g')
+  END_VERSIONS
+
+Command exit status:
+  1
+
+Command output:
+  ERROR: Please check samplesheet -> FastQ file does not have extension '.fastq.gz' or '.fq.gz'!
+  Line: 'ERR5181310,fastq/ERR5181310_1.fastq,fastq/ERR5181310_2.fastq,auto'
+
+Command error:
+  ERROR: Please check samplesheet -> FastQ file does not have extension '.fastq.gz' or '.fq.gz'!
+  Line: 'ERR5181310,fastq/ERR5181310_1.fastq,fastq/ERR5181310_2.fastq,auto'
+
+Work dir:
+  /scratch/users/ntu/suffiazi/mooc_workspace/work/8c/6a80b4cd9db542c6d38c03c6bb6e3f
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Oct-18 17:21:49.524 [Actor Thread 28] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Oct-18 17:21:49.525 [Actor Thread 2] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Oct-18 17:21:49.525 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Oct-18 17:21:49.534 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-18 17:21:49.537 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:COLLAPSE_PRIMERS (nCoV-2019.primer.bed); status: COMPLETED; exit: 0; error: -; workDir: /scratch/users/ntu/suffiazi/mooc_workspace/work/be/af8c2bd2a74f9927ebff2fbdbf6bc8]
+Oct-18 17:21:49.539 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:SNPEFF_BUILD; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Oct-18 17:21:49.539 [Actor Thread 11] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_VIRALRECON:ILLUMINA:PREPARE_GENOME:BOWTIE2_BUILD; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Oct-18 17:21:49.539 [Actor Thread 20] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.003 s; external sort time: 0.001 s; total time: 0.004 s
+Oct-18 17:21:49.545 [Actor Thread 20] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /scratch/users/ntu/suffiazi/mooc_workspace/work/collect-file/0520e593dea0153015b3151eb2124e56
+Oct-18 17:21:49.550 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-18 17:21:49.551 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-18 17:21:49.551 [Actor Thread 20] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /var/tmp/pbs.3392362.pbs101/nxf-12167122624069617921
+Oct-18 17:21:49.554 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/viralrecon][0;31m Pipeline completed with errors[0m-
+Oct-18 17:21:49.600 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=4s; failedDuration=1.1s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=5; peakMemory=18 GB; ]
+Oct-18 17:21:49.603 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Oct-18 17:21:49.611 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Oct-18 17:21:50.326 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Oct-18 17:21:50.577 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-18 17:21:50.577 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@2.1.4'
+Oct-18 17:21:50.577 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Oct-18 17:21:50.604 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Oct-18 17:21:50.605 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

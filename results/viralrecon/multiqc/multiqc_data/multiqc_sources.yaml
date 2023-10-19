@@ -1,0 +1,61 @@
+'PREPROCESS: FastQC (raw reads)':
+  all_sections:
+    ERR5181310_1: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5181310_1_fastqc.zip
+    ERR5181310_2: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5181310_2_fastqc.zip
+    ERR5405022_1: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5405022_1_fastqc.zip
+    ERR5405022_2: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5405022_2_fastqc.zip
+    ERR5556343_1: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5556343_1_fastqc.zip
+    ERR5556343_2: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5556343_2_fastqc.zip
+    ERR5743893_1: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5743893_1_fastqc.zip
+    ERR5743893_2: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/ERR5743893_2_fastqc.zip
+    SRR13500958_1: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/SRR13500958_1_fastqc.zip
+    SRR13500958_2: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastqc/SRR13500958_2_fastqc.zip
+'PREPROCESS: fastp (adapter trimming)':
+  all_sections:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastp/ERR5181310.fastp.json
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastp/ERR5405022.fastp.json
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastp/ERR5556343.fastp.json
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastp/ERR5743893.fastp.json
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/fastp/SRR13500958.fastp.json
+'VARIANTS: BCFTools':
+  stats:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5181310.bcftools_stats.txt
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5405022.bcftools_stats.txt
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5556343.bcftools_stats.txt
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5743893.bcftools_stats.txt
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/SRR13500958.bcftools_stats.txt
+'VARIANTS: Bowtie 2':
+  all_sections:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5181310.bowtie2.log
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5405022.bowtie2.log
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5556343.bowtie2.log
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5743893.bowtie2.log
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/SRR13500958.bowtie2.log
+'VARIANTS: SAMTools (iVar)':
+  flagstat:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/ivar_trim/ERR5181310.ivar_trim.sorted.bam.flagstat
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/ivar_trim/ERR5405022.ivar_trim.sorted.bam.flagstat
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/ivar_trim/ERR5556343.ivar_trim.sorted.bam.flagstat
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/ivar_trim/ERR5743893.ivar_trim.sorted.bam.flagstat
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/ivar_trim/SRR13500958.ivar_trim.sorted.bam.flagstat
+'VARIANTS: SAMTools (raw)':
+  flagstat:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5181310.sorted.bam.flagstat
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5405022.sorted.bam.flagstat
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5556343.sorted.bam.flagstat
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/ERR5743893.sorted.bam.flagstat
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/bowtie2/SRR13500958.sorted.bam.flagstat
+'VARIANTS: SnpEff':
+  all_sections:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5181310.snpeff.csv
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5405022.snpeff.csv
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5556343.snpeff.csv
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/ERR5743893.snpeff.csv
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/variants/SRR13500958.snpeff.csv
+'VARIANTS: mosdepth':
+  genome_results:
+    ERR5181310: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/mosdepth/ERR5181310.mosdepth.global.dist.txt
+    ERR5405022: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/mosdepth/ERR5405022.mosdepth.global.dist.txt
+    ERR5556343: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/mosdepth/ERR5556343.mosdepth.global.dist.txt
+    ERR5743893: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/mosdepth/ERR5743893.mosdepth.global.dist.txt
+    SRR13500958: /scratch/users/ntu/suffiazi/mooc_workspace/work/46/396daea923463431f41e0999c6c23a/mosdepth/SRR13500958.mosdepth.global.dist.txt

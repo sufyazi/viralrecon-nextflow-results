@@ -1,0 +1,19 @@
+Genomic features of type "ANY" loaded: 24
+reference chromosomes:
+	MN908947.3 (total length: 29903 bp, total length without N's: 29903 bp, maximal covered length: 29782 bp)
+
+total genome size: 29903
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+ERR5405022-consensus     | 98.030    | 0.999       | 4         | 17        | 7         | -         | -         |
+ERR5556343-consensus     | 97.790    | 1.000       | 4         | 17        | 7         | -         | -         |
+SRR13500958-consensus    | 99.595    | 1.000       | 2         | 21        | 3         | -         | -         |
+ERR5743893-consensus     | 97.656    | 1.000       | 3         | 19        | 4         | -         | -         |
+ERR5181310-consensus     | 98.284    | 0.999       | 3         | 19        | 4         | -         | -         |

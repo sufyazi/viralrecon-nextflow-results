@@ -1,0 +1,6 @@
+sample,fastq_1,fastq_2,strandedness
+ERR5181310,fastq/ERR5181310_1.fastq.gz,fastq/ERR5181310_2.fastq.gz,auto
+ERR5405022,fastq/ERR5405022_1.fastq.gz,fastq/ERR5405022_2.fastq.gz,auto
+ERR5556343,fastq/ERR5556343_1.fastq.gz,fastq/ERR5556343_2.fastq.gz,auto
+ERR5743893,fastq/ERR5743893_1.fastq.gz,fastq/ERR5743893_2.fastq.gz,auto
+SRR13500958,fastq/SRR13500958_1.fastq.gz,fastq/SRR13500958_2.fastq.gz,auto

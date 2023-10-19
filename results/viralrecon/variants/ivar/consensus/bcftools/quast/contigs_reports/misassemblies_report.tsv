@@ -1,0 +1,21 @@
+Assembly	ERR5405022.consensus	ERR5556343.consensus	SRR13500958.consensus	ERR5743893.consensus	ERR5181310.consensus
+# misassemblies	0	0	0	0	0
+  # contig misassemblies	0	0	0	0	0
+    # c. relocations	0	0	0	0	0
+    # c. translocations	0	0	0	0	0
+    # c. inversions	0	0	0	0	0
+  # scaffold misassemblies	0	0	0	0	0
+    # s. relocations	0	0	0	0	0
+    # s. translocations	0	0	0	0	0
+    # s. inversions	0	0	0	0	0
+# misassembled contigs	0	0	0	0	0
+Misassembled contigs length	0	0	0	0	0
+# local misassemblies	0	0	0	0	0
+# scaffold gap ext. mis.	0	0	0	0	0
+# scaffold gap loc. mis.	2	2	0	1	1
+# unaligned mis. contigs	0	0	0	0	0
+# mismatches	34	34	22	27	28
+# indels	4	1	0	1	5
+    # indels (<= 5 bp)	2	0	0	1	3
+    # indels (> 5 bp)	2	1	0	0	2
+Indels length	19	9	0	1	24

@@ -1,0 +1,54 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: ERR5405022 (29884bp)
+Best alignment score: 22218.6 (LEN: 22252, IDY: 99.85), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 29232.9, number of alignments: 3, unaligned bases: 589
+		This contig is misassembled.
+			Real Alignment 1: 55 22324 | 55 22306 | 22270 22252 | 99.85 | MN908947.3 ERR5405022
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 0 (local)
+			Real Alignment 2: 22543 25969 | 22525 25951 | 3427 3427 | 99.77 | MN908947.3 ERR5405022
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 0 (local)
+			Real Alignment 3: 26220 29836 | 26202 29817 | 3617 3616 | 99.7 | MN908947.3 ERR5405022
+
+Analyzing coverage...
+Writing SNPs into /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/minimap_output/ERR5405022-consensus.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/minimap_output/ERR5405022-consensus.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 2
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 29314
+	Raw Aligned Bases in Assembly: 29295
+	Total Aligned Bases in Assembly (with "Extras"): 29295
+
+	SNPs: 34
+	Insertions: 0
+	Deletions: 19
+

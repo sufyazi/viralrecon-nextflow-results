@@ -1,0 +1,54 @@
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+
+WARNNIG: different read numbers of the 187 pack
+Read1 pack size: 715
+Read2 pack size: 332
+
+Read1 before filtering:
+total reads: 198332
+total bases: 36486630
+Q20 bases: 35659089(97.7319%)
+Q30 bases: 34030020(93.2671%)
+
+Read2 before filtering:
+total reads: 198332
+total bases: 33355194
+Q20 bases: 31951720(95.7923%)
+Q30 bases: 29813056(89.3806%)
+
+Read1 after filtering:
+total reads: 103040
+total bases: 21156323
+Q20 bases: 20997980(99.2516%)
+Q30 bases: 20421593(96.5271%)
+
+Read2 after filtering:
+total reads: 103040
+total bases: 19282111
+Q20 bases: 18977561(98.4206%)
+Q30 bases: 18200353(94.3898%)
+
+Filtering result:
+reads passed filter: 206080
+reads failed due to low quality: 138464
+reads failed due to too many N: 2
+reads failed due to too short: 52118
+reads with adapter trimmed: 1196
+bases trimmed due to adapters: 2064
+reads with polyX in 3' end: 186
+bases trimmed in polyX tail: 4401
+
+Duplication rate: 66.7724%
+
+Insert size peak (evaluated by paired-end reads): 383
+
+JSON report: ERR5743893.fastp.json
+HTML report: ERR5743893.fastp.html
+
+fastp --in1 ERR5743893_1.fastq.gz --in2 ERR5743893_2.fastq.gz --out1 ERR5743893_1.fastp.fastq.gz --out2 ERR5743893_2.fastp.fastq.gz --json ERR5743893.fastp.json --html ERR5743893.fastp.html --thread 4 --detect_adapter_for_pe --cut_front --cut_tail --trim_poly_x --cut_mean_quality 30 --qualified_quality_phred 30 --unqualified_percent_limit 10 --length_required 50 
+fastp v0.23.2, time used: 11 seconds

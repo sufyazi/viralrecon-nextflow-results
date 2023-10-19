@@ -1,0 +1,88 @@
+ASCIIGENOME:
+  asciigenome: 1.16.0
+  bedtools: 2.30.0
+BCFTOOLS_CONSENSUS:
+  bcftools: '1.16'
+BCFTOOLS_FILTER:
+  bcftools: '1.16'
+BCFTOOLS_QUERY:
+  bcftools: '1.16'
+BCFTOOLS_SORT:
+  bcftools: '1.16'
+BCFTOOLS_STATS:
+  bcftools: '1.16'
+BEDTOOLS_MASKFASTA:
+  bedtools: 2.30.0
+BEDTOOLS_MERGE:
+  bedtools: 2.30.0
+BOWTIE2_ALIGN:
+  bowtie2: 2.4.4
+  pigz: '2.6'
+  samtools: 1.16.1
+BOWTIE2_BUILD:
+  bowtie2: 2.4.4
+COLLAPSE_PRIMERS:
+  python: 3.9.5
+CUSTOM_DUMPSOFTWAREVERSIONS:
+  python: 3.11.0
+  yaml: '6.0'
+CUSTOM_GETCHROMSIZES:
+  getchromsizes: 1.16.1
+FASTP:
+  fastp: 0.23.2
+FASTQC_RAW:
+  fastqc: 0.11.9
+FASTQC_TRIM:
+  fastqc: 0.11.9
+GUNZIP_GFF:
+  gunzip: '1.10'
+IVAR_TRIM:
+  ivar: '1.4'
+IVAR_VARIANTS:
+  ivar: '1.4'
+IVAR_VARIANTS_TO_VCF:
+  python: 3.9.12
+MAKE_BED_MASK:
+  python: 3.9.5
+  samtools: '1.14'
+MAKE_VARIANTS_LONG_TABLE:
+  python: 3.9.9
+MOSDEPTH_AMPLICON:
+  mosdepth: 0.3.3
+MOSDEPTH_GENOME:
+  mosdepth: 0.3.3
+PICARD_COLLECTMULTIPLEMETRICS:
+  picard: 3.0.0
+PLOT_BASE_DENSITY:
+  r-base: 4.0.3
+PLOT_MOSDEPTH_REGIONS_AMPLICON:
+  r-base: 4.0.3
+PLOT_MOSDEPTH_REGIONS_GENOME:
+  r-base: 4.0.3
+RENAME_FASTA_HEADER:
+  sed: '4.7'
+SAMPLESHEET_CHECK:
+  python: 3.9.5
+SAMTOOLS_FLAGSTAT:
+  samtools: 1.16.1
+SAMTOOLS_IDXSTATS:
+  samtools: 1.16.1
+SAMTOOLS_INDEX:
+  samtools: 1.16.1
+SAMTOOLS_SORT:
+  samtools: 1.16.1
+SAMTOOLS_STATS:
+  samtools: 1.16.1
+SNPEFF_ANN:
+  snpeff: 5.0e
+SNPEFF_BUILD:
+  snpeff: 5.0e
+SNPSIFT_EXTRACTFIELDS:
+  snpsift: '4.3'
+TABIX_BGZIP:
+  tabix: '1.12'
+TABIX_TABIX:
+  tabix: '1.12'
+Workflow:
+  Nextflow: 23.10.0
+  nf-core/viralrecon: 2.6.0

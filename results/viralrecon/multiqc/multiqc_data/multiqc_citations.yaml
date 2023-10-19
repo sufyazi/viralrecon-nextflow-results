@@ -1,0 +1,18 @@
+MultiQC:
+- 10.1093/bioinformatics/btw354
+bcftools:
+- 10.1093/gigascience/giab008
+bowtie2:
+- 10.1038/nmeth.1923
+- 10.1038/nmeth.3317
+- 10.1038/s41587-019-0201-4
+fastp:
+- 10.1093/bioinformatics/bty560
+mosdepth:
+- 10.1093/bioinformatics/btx699
+samtools_bowtie2:
+- 10.1093/bioinformatics/btp352
+samtools_ivar:
+- 10.1093/bioinformatics/btp352
+snpeff:
+- 10.4161/fly.19695

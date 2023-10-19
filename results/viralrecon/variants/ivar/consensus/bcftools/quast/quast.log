@@ -1,0 +1,186 @@
+/usr/local/bin/quast.py --output-dir quast -r nCoV-2019.reference.fasta --features GCA_009858895.3_ASM985889v3_genomic.200409.gff --threads 4 ERR5405022.consensus.fa ERR5556343.consensus.fa SRR13500958.consensus.fa ERR5743893.consensus.fa ERR5181310.consensus.fa
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-4.18.0-305.25.1.el8_4.x86_64-x86_64-with-glibc2.28 (linux_64)
+  Python version: 3.9.13
+  CPUs number: 256
+
+Started: 2023-10-18 18:03:54
+
+Logging to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/quast.log
+
+CWD: /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005
+Main parameters: 
+  MODE: default, threads: 4, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/nCoV-2019.reference.fasta ==> nCoV-2019.reference
+
+Contigs:
+  Pre-processing...
+  1  ERR5405022.consensus.fa ==> ERR5405022.consensus
+  2  ERR5556343.consensus.fa ==> ERR5556343.consensus
+  3  SRR13500958.consensus.fa ==> SRR13500958.consensus
+  4  ERR5743893.consensus.fa ==> ERR5743893.consensus
+  5  ERR5181310.consensus.fa ==> ERR5181310.consensus
+
+2023-10-18 18:03:56
+Running Basic statistics processor...
+  Reference genome:
+    nCoV-2019.reference.fasta, length = 29903, num fragments = 1, GC % = 37.97
+  Contig files: 
+    1  ERR5405022.consensus
+    2  ERR5556343.consensus
+    3  SRR13500958.consensus
+    4  ERR5743893.consensus
+    5  ERR5181310.consensus
+  Calculating N50 and L50...
+    1  ERR5405022.consensus, N50 = 29884, L50 = 1, auN = 29884.0, Total length = 29884, GC % = 37.97, # N's per 100 kbp =  1977.65
+    2  ERR5556343.consensus, N50 = 29894, L50 = 1, auN = 29894.0, Total length = 29894, GC % = 37.96, # N's per 100 kbp =  2114.14
+    3  SRR13500958.consensus, N50 = 29903, L50 = 1, auN = 29903.0, Total length = 29903, GC % = 37.98, # N's per 100 kbp =  404.64
+    4  ERR5743893.consensus, N50 = 29902, L50 = 1, auN = 29902.0, Total length = 29902, GC % = 37.93, # N's per 100 kbp =  2220.59
+    5  ERR5181310.consensus, N50 = 29830, L50 = 1, auN = 29830.0, Total length = 29830, GC % = 37.92, # N's per 100 kbp =  1354.34
+  Drawing Nx plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/GC_content_plot.pdf
+  Drawing ERR5405022.consensus GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/ERR5405022.consensus_GC_content_plot.pdf
+  Drawing ERR5556343.consensus GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/ERR5556343.consensus_GC_content_plot.pdf
+  Drawing SRR13500958.consensus GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/SRR13500958.consensus_GC_content_plot.pdf
+  Drawing ERR5743893.consensus GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/ERR5743893.consensus_GC_content_plot.pdf
+  Drawing ERR5181310.consensus GC content plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/basic_stats/ERR5181310.consensus_GC_content_plot.pdf
+Done.
+
+2023-10-18 18:03:58
+Running Contig analyzer...
+  3  SRR13500958.consensus
+  4  ERR5743893.consensus
+  1  ERR5405022.consensus
+  2  ERR5556343.consensus
+  4  Logging to files /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/contigs_report_ERR5743893-consensus.stdout and contigs_report_ERR5743893-consensus.stderr...
+  3  Logging to files /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/contigs_report_SRR13500958-consensus.stdout and contigs_report_SRR13500958-consensus.stderr...
+  1  Logging to files /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/contigs_report_ERR5405022-consensus.stdout and contigs_report_ERR5405022-consensus.stderr...
+  4  Aligning contigs to the reference
+  2  Logging to files /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/contigs_report_ERR5556343-consensus.stdout and contigs_report_ERR5556343-consensus.stderr...
+  3  Aligning contigs to the reference
+  1  Aligning contigs to the reference
+  2  Aligning contigs to the reference
+  1  /usr/local/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s \
+     65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/nCoV-2019.reference.fasta \
+     quast/quast_corrected_input/ERR5405022-consensus.fa > quast/contigs_reports/minimap_output/ERR5405022-consensus.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_ERR5405022-consensus.stderr
+  2  /usr/local/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s \
+     65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/nCoV-2019.reference.fasta \
+     quast/quast_corrected_input/ERR5556343-consensus.fa > quast/contigs_reports/minimap_output/ERR5556343-consensus.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_ERR5556343-consensus.stderr
+  4  /usr/local/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s \
+     65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/nCoV-2019.reference.fasta \
+     quast/quast_corrected_input/ERR5743893-consensus.fa > quast/contigs_reports/minimap_output/ERR5743893-consensus.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_ERR5743893-consensus.stderr
+  3  /usr/local/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s \
+     65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/nCoV-2019.reference.fasta \
+     quast/quast_corrected_input/SRR13500958-consensus.fa > quast/contigs_reports/minimap_output/SRR13500958-consensus.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_SRR13500958-consensus.stderr
+  1  Analysis is finished.
+
+  3  Analysis is finished.
+  5  ERR5181310.consensus
+
+  2  Analysis is finished.
+
+  4  Analysis is finished.
+
+  5  Logging to files /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/contigs_report_ERR5181310-consensus.stdout and contigs_report_ERR5181310-consensus.stderr...
+  5  Aligning contigs to the reference
+  5  /usr/local/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s \
+     65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/nCoV-2019.reference.fasta \
+     quast/quast_corrected_input/ERR5181310-consensus.fa > quast/contigs_reports/minimap_output/ERR5181310-consensus.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_ERR5181310-consensus.stderr
+  5  Analysis is finished.
+
+  Creating total report...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2023-10-18 18:03:58
+Running NA-NGA calculation...
+  1  ERR5405022.consensus, Largest alignment = 29295, NA50 = 29295, NGA50 = 29295, LA50 = 1, LGA50 = 1
+  2  ERR5556343.consensus, Largest alignment = 29233, NA50 = 29233, NGA50 = 29233, LA50 = 1, LGA50 = 1
+  3  SRR13500958.consensus, Largest alignment = 29782, NA50 = 29782, NGA50 = 29782, LA50 = 1, LGA50 = 1
+  4  ERR5743893.consensus, Largest alignment = 29201, NA50 = 29201, NGA50 = 29201, LA50 = 1, LGA50 = 1
+  5  ERR5181310.consensus, Largest alignment = 29366, NA50 = 29366, NGA50 = 29366, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/aligned_stats/NGAx_plot.pdf
+Done.
+
+2023-10-18 18:03:58
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 24 genomic features of type "ANY"
+  1  ERR5405022.consensus
+  2  ERR5556343.consensus
+  3  SRR13500958.consensus
+  4  ERR5743893.consensus
+  1  Analysis is finished.
+  5  ERR5181310.consensus
+  3  Analysis is finished.
+  2  Analysis is finished.
+  4  Analysis is finished.
+  5  Analysis is finished.
+  Drawing genomic features cumulative plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/genome_stats/features_cumulative_plot.pdf
+  Drawing genomic features FRCurve plot...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/genome_stats/features_frcurve_plot.pdf
+  Drawing # complete genomic features histogram...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/genome_stats/complete_features_histogram.pdf
+  Drawing Genome fraction, % histogram...
+    saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2023-10-18 18:03:59
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2023-10-18 18:04:01
+RESULTS:
+  Text versions of total report are saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/report.html
+  PDF version (tables and plots) is saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/report.pdf
+  Icarus (contig browser) is saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/icarus.html
+  Log is saved to /scratch/users/ntu/suffiazi/mooc_workspace/work/44/9c221836c48c009f68b599d9ad5005/quast/quast.log
+
+Finished: 2023-10-18 18:04:01
+Elapsed time: 0:00:07.042448
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
